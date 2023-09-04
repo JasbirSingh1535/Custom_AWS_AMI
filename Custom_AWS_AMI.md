@@ -20,7 +20,7 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
 
 1. Create an EC2 Instance from a base AMI provided by AWS (here we will be creating a Windows Server 2019 virtual machine).
 
-[image001]
+   ![](/img001.png)
 
 2. Connect to the VM through RDP (Remote Desktop Protocol) & customize the VM as per your requirements. In this example we will be installing Google Chrome, Visual Studio Code & Git, along with that we will set-up an auto shutdown feature which will pop up a message in every 15 minutes prompting a user to click on OK if he/she is working on the Virtual Machine & in-case of no response for next 5 minutes the VM will auto shutdown (Link to set-up this feature is provided in the end of the documentation)
 
@@ -28,26 +28,27 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
 
 4. After the VM is in stopped state, Select the VM (1) >> Open Actions Drop-down {2} >> Navigate to Image and templates (3) >> Create image (4)
 
-[image002]
+    ![](/img002.png)
 
 5. Fill in the details: Name of Custom AMI (1), Description of the AMI (2), EBS Volume (3) & then click on Create Image (4)
 
-[image003]
+    ![](/img003.png)
 
 **Note:** The AMI creation might take 15-20 minutes to complete, you can monitor the status by navigating to AMI (1) >> Owned by me (2)>> Status (3)
 
-[image004]
+    
+![](/img004.png)
 
 6. Once the AMI status changes from pending to available, select the AMI (1) >>Navigate to Actions (2) >> Edit AMI permissions (3)
 
-[image005]
+ ![](/img005.png)
 
 7. Here we will get 2 options either to make this AMI public or private.
 Selecting public access will make the AMI available across all AWS organizations & accounts in the region where AMI is present.
 
 To get detailed information on making an AWS AMI public refer to the following link: [Making AWS AMI Public](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/sharingamis-intro.html)
 
-[image006]
+ ![](/img006.png)
 
 If we select private access, then we can specify the AWS accounts or Organizational Units where we want this AMI to be accessible, to get more detailed information refer to these links:
 
@@ -55,15 +56,15 @@ If we select private access, then we can specify the AWS accounts or Organizatio
 
 [Sharing AMI with AWS Accounts](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/sharingamis-explicit.html)
 
-[image007]
+ ![](/img007.png)
 
 Once you’ve selected the permission type, click on Save Changes
 
-[image008]
+ ![](/img008.png)
 
 8. To validate the availability of AMI, log in to any AWS account (if permissions are public) or to respective AWS accounts where access has been provided & try to deploy an EC2 instance with this AMI (ensure that we are deploying the EC2 instance only in the region where AMI is available)
 
-[image009]
+ ![](/img009.png)
 
 You can select the custom AMI created & start working with the pre-deployed resources & tools.
 
@@ -81,7 +82,7 @@ For more details on AMI costing check the following links:
 
 1. In the AWS Console launch the Cloudshell.
 
-[image021]
+ ![](/img021.png)
 
 2. Once the Cloudshell terminal is ready copy the following code in a notepad, make changes acordingly, paste it in the terminal & hit **Enter**
 
@@ -101,37 +102,37 @@ true - The instance is not rebooted before creating the image. This creates cras
 
 false - The instance is rebooted before creating the image. This ensures that all buffered data and data in memory is written to the volumes before the snapshots are created.
 
-[image025]
+ ![](/img025.png)
 
 3. Once the command runs successfully, you will get the Custom AMI ID in the outputs.
 
-[image026]
+ ![](/img026.png)
 
 4. You can Navigate to the AMI section & verify your newly created custom AWS AMI.
 
-[image027]
+ ![](/img027.png)
 
 5. Once the image status changes to Available, we need to edit the permissions & make the AMI available for other Accounts to access the AMI.
 Select the AMI (1) >>Navigate to Actions (2) >> Edit AMI permissions (3)
 
-[image015]
+ ![](/img015.png)
 
 6. Here we will get 2 options either to make this AMI public or private. 
 Selecting public access will make the AMI available across all AWS organizations & accounts in the region where AMI is present.
 
-[image016]
+ ![](/img016.png)
 
 If we select private access, then we can specify the AWS accounts or Organizational Units where we want this AMI to be accessible from.
 
-[image017]
+ ![](/img017.png)
 
 Once you’ve selected the permission type, click on Save Changes
 
-[image018]
+ ![](/img018.png)
 
 7. To validate the availability of AMI, log in to any AWS account (if permissions are public) or to respective AWS accounts where access has been provided & try to deploy an EC2 instance with this AMI (ensure that we are deploying the EC2 instance only in the region where AMI is available)
 
-[image019]
+ ![](/img019.png)
 
 You can select the custom AMI created & start working with the pre-deployed resources & tools.
 
@@ -141,43 +142,43 @@ You can select the custom AMI created & start working with the pre-deployed reso
 
 1. Select the custom AMI which we must copy (1), next navigate to Actions dropdown (2) & select Copy Image (3).
 
-[image010]
+ ![](/img010.png)
 
 2. Fill in the required details AMI Image Name (1), AMI Description (2), Destination Region (3) where you want to copy the image & then click on Copy AMI (4)
 
-[image011]
+ ![](/img011.png)
 
 3. Once the Copy Image action is initiated, select the Region tab (1) & from the dropdown navigate to the region where the image is copied (2)
 
-[image012]
+ ![](/img012.png)
 
 4. Verify the state of the copied AMI, wait for the status to change from Pending to Available (It might take 15-20 minutes to get the image ready to use).
 
-[image013]
+ ![](/img013.png)
 
-[image014]
+![](/img014.png)
 
 5. Once the image status changes to Available, we need to edit the permissions & make the AMI available for other Accounts to access the AMI.
 Select the AMI (1) >>Navigate to Actions (2) >> Edit AMI permissions (3)
 
-[image015]
+![](/img015.png)
 
 6. Here we will get 2 options either to make this AMI public or private. 
 Selecting public access will make the AMI available across all AWS organizations & accounts in the region where AMI is present.
 
-[image016]
+![](/img016.png)
 
 If we select private access, then we can specify the AWS accounts or Organizational Units where we want this AMI to be accessible from.
 
-[image017]
+![](/img017.png)
 
 Once you’ve selected the permission type, click on Save Changes
 
-[image018]
+![](/img018.png)
 
 7. To validate the availability of AMI, log in to any AWS account (if permissions are public) or to respective AWS accounts where access has been provided & try to deploy an EC2 instance with this AMI (ensure that we are deploying the EC2 instance only in the region where AMI is available)
 
-[image019]
+![](/img019.png)
 
 You can select the custom AMI created & start working with the pre-deployed resources & tools.
 
@@ -185,7 +186,7 @@ You can select the custom AMI created & start working with the pre-deployed reso
 
 1. In the AWS Console launch the Cloudshell.
 
-[image021]
+![](/img021.png)
 
 2. Once the Cloudshell terminal is ready copy the following code in a notepad, make changes acordingly, paste it in the terminal & hit **Enter**
 
@@ -206,39 +207,39 @@ You can select the custom AMI created & start working with the pre-deployed reso
 
     * **description:** Provide the description you want to add to the Custom AMI.
 
-[image022]
+![](/img022.png)
 
 3. Once the command runs successfully, you will receive an output which will be the AMI ID of the custom image replicated to another region.
 
-[image012]
+![](/img012.png)
 
-[image023]
+![](/img023.png)
 
 4. Navigate to the region where this Custom AMI is replicated & verify the status.
 
-[image024]
+![](/img024.png)
 
 5. Once the image status changes to Available, we need to edit the permissions & make the AMI available for other Accounts to access the AMI.
 Select the AMI (1) >>Navigate to Actions (2) >> Edit AMI permissions (3)
 
-[immage15]
+![](/img015.png)
 
 6.  Here we will get 2 options either to make this AMI public or private. 
 Selecting public access will make the AMI available across all AWS organizations & accounts in the region where AMI is present.
 
-[image16]
+![](/img016.png)
 
 If we select private access, then we can specify the AWS accounts or Organizational Units where we want this AMI to be accessible from.
 
-[image17]
+![](/img017.png)
 
 Once you’ve selected the permission type, click on Save Changes
 
-[image18]
+![](/img018.png)
 
 7. To validate the availability of AMI, log in to any AWS account (if permissions are public) or to respective AWS accounts where access has been provided & try to deploy an EC2 instance with this AMI (ensure that we are deploying the EC2 instance only in the region where AMI is available)
 
-[image19]
+![](/img019.png)
 
 You can select the custom AMI created & start working with the pre-deployed resources & tools.
 
@@ -248,7 +249,7 @@ To begin with deploying a CFT with a custom AMI created, we need to ensure that 
 
 1. Navigate to the AMI page & copy the AMI id (the custom AMI which we want to use within CFT).
 
-[image020]
+![](/img020.png)
 
 2. Build a CFT with the required set of resources, while defining properties of an EC2 instance mention the ID of the Custom AMI copied in previous step.
 
