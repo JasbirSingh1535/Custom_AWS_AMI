@@ -24,7 +24,35 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
 
 2. Connect to the VM through RDP (Remote Desktop Protocol) & customize the VM as per your requirements. In this example we will be installing Google Chrome, Visual Studio Code & Git, along with that we will set-up an auto shutdown feature which will pop up a message in every 15 minutes prompting a user to click on OK if he/she is working on the Virtual Machine & in-case of no response for next 5 minutes the VM will auto shutdown (Link to set-up this feature is provided in the end of the documentation)
 
-3. Once all the customizations are complete ensure to remove all the temp files & cleanup the recycle bin, & then Shutdown the VM selecting Planned Shutdown option.
+3. Once all the customizations are complete ensure to remove all the temp files & cleanup the recycle bin, & then Shutdown the VM selecting Planned Shutdown option. This will prepare a specialized VM for image capturing, we will discuss in details the different types of ways that a VM can be prepared before capturing an image.
+
+ A. **Specialized VM:** A specialized image is an image that contains all the instance-specific information of a running VM, such as the computer name, the SID, and other settings that are unique to that VM. A specialized image can be used to create only one VM that is an exact copy of the original VM.
+ 
+ B. **Generalized VM:** Generalizing or deprovisioning a VM is done when you specifically want to create an image that has no machine specific information, like user accounts. Generalizing removes machine specific information so the image can be used to create multiple VMs. Once the VM has been generalized or deprovisioned, you need to let the platform know so that the boot sequence can be set correctly. To generalize a Windows VM in AWS follow the steps given below:
+
+  * After the completion of customizing your Windows VM, search for **EC2 Launch Settings** in the Windows search bar. 
+  
+  **Note:** For Windows Server 2016 & later you can find this option under EC2 Launch Settings while for Windows Server 2012 R2 & earlier it can be found under EC2 Config Setings.
+
+  ![](/img028.png)
+
+  * In the EC2 Launch Settings Dialog Box, for Administrator Password (1), do one of the following:
+
+    * **Choose Random:** EC2Launch generates a password and encrypts it using the user's key. The system disables this setting after the instance is launched so that this password persists if the instance is rebooted or stopped and started.
+
+    * **Choose Specify:** Type a password that meets the system requirements. The password is stored in LaunchConfig.json as clear text and is deleted after Sysprep sets the administrator password. If you shut down now, the password is set immediately. EC2Launch encrypts the password using the user's key.
+
+    * **Choose DoNothing:** Specify a password in the unattend.xml file. If you don't specify a password in unattend.xml, the administrator account is disabled.
+
+* Choose Shutdown with Sysprep (2) & Click on Save (3).
+
+![](/img029.png)
+
+![](/img030.png)
+
+* Wait for 5 to 7 minutes for the sysprep to complete, the remote connection will disconnect & VM will go into stopped state.
+
+![](/img031.png)
 
 4. After the VM is in stopped state, Select the VM (1) >> Open Actions Drop-down {2} >> Navigate to Image and templates (3) >> Create image (4)
 
