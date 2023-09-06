@@ -170,15 +170,15 @@ You can select the custom AMI created & start working with the pre-deployed reso
 
 1. Select the custom AMI which we must copy (1), next navigate to Actions dropdown (2) & select Copy Image (3).
 
- ![](/img023.png)
+ ![](/img014.png)
 
 2. Fill in the required details AMI Image Name (1), AMI Description (2), Destination Region (3) where you want to copy the image & then click on Copy AMI (4)
 
- ![](/img014.png)
+ ![](/img015.png)
 
 3. Once the Copy Image action is initiated, select the Region tab (1) & from the dropdown navigate to the region where the image is copied (2)
 
- ![](/img015.png)
+ ![](/img016.png)
 
 4. Verify the state of the copied AMI, wait for the status to change from Pending to Available (It might take 15-20 minutes to get the image ready to use).
 
