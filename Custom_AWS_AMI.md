@@ -166,7 +166,7 @@ You can select the custom AMI created & start working with the pre-deployed reso
 
 # Copying an EBS backed AMI from one region to another region using AWS Console
 
-## Steps for copying a custom EBS backed AMI from an EC2 Instance Using AWS Cconsole
+## Steps for copying a custom EBS backed AMI from an EC2 Instance Using AWS Console
 
 1. Select the custom AMI which we must copy (1), next navigate to Actions dropdown (2) & select Copy Image (3).
 
@@ -322,5 +322,5 @@ Below are the differences listed based on the characterisitc of each storage opt
 
 To summarize the most efficient way to create & store a cutom AWS AMI is by creating an Amazon EBS-backed AMI.
 
-**Note:** It is not possible to set delete protection on a custom AMI, thus ensure that it is stored in a single AWS account with only few people having Admiistrator Access on the account, for other members you can provide fine-grained restrictions to access the AMI but not delete it.
+**Note:** It is not possible to set delete protection on a custom AMI, thus ensure that it is stored in a single AWS account with only few people having Administrator Access on the account, for other members you can provide fine-grained restrictions to access the AMI but not delete it.
 
