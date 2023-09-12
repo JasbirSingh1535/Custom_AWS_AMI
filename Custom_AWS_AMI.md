@@ -42,7 +42,7 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
 
     * **Choose Specify:** Type a password that meets the system requirements. The password is stored in LaunchConfig.json as clear text and is deleted after Sysprep sets the administrator password. If you shut down now, the password is set immediately. EC2Launch encrypts the password using the user's key.
 
-    * **Choose DoNothing:** Specify a password in the unattend.xml file. If you don't specify a password in unattend.xml, the administrator account is disabled.
+    * **Choose Do not set:** Specify a password in the unattend.xml file. If you don't specify a password in unattend.xml, the administrator account is disabled.
 
 * Choose Shutdown with Sysprep (2) & Click on Save (3).
 
