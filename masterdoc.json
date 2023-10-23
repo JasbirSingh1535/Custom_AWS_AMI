@@ -1,1 +1,13 @@
 
+[
+  {
+    "Name": "Wiz Tech Foundations",
+    "Language": "English",
+    "Files": [
+	    {
+        "RawFilePath": "https://github.com/JasbirSingh1535/Custom_AWS_AMI/blob/Imageresizetest/Custom_AWS_AMI.md",
+        "Order": 1
+      }
+    ]
+  }
+]
