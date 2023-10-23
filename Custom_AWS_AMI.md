@@ -38,7 +38,7 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
   * After the completion of customizing your Windows VM, search for **EC2 Launch Settings** in the Windows search bar. 
   
   **Note:** For Windows Server 2016 & later you can find this option under EC2 Launch Settings while for Windows Server 2012 R2 & earlier it can be found under EC2 Config Setings.
-  
+<img width="80" height="72" img src="/img002.png"/>
 ![](/img002.png)
   * In the EC2 Launch Settings Dialog Box, for Administrator Password (1), do one of the following:
 
