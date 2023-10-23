@@ -23,7 +23,8 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
    <img width="480" height="720" img src="/img001.png"/>
    </p>
 
-   <img src="/img001.png" width="150" height="280">
+   <img src="https://testbucket7867.s3.amazonaws.com/image1.png" width="150" height="280">
+   ![](https://testbucket7867.s3.amazonaws.com/image1.png)
 2. Connect to the VM through RDP (Remote Desktop Protocol) & customize the VM as per your requirements. In this example we will be installing Google Chrome, Visual Studio Code & Git, along with that we will set-up an auto shutdown feature which will pop up a message in every 15 minutes prompting a user to click on OK if he/she is working on the Virtual Machine & in-case of no response for next 5 minutes the VM will auto shutdown (Link to set-up this feature is provided in the end of the documentation)
 
 3. Once all the customizations are complete ensure to remove all the temp files & cleanup the recycle bin, & then Shutdown the VM selecting Planned Shutdown option. This will prepare a specialized VM for image capturing, we will discuss in details the different types of ways that a VM can be prepared before capturing an image.
