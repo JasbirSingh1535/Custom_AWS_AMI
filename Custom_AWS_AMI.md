@@ -1,4 +1,4 @@
-# Custom AMI (Amazon Machine Image) Creation
+![image](https://github.com/JasbirSingh1535/Custom_AWS_AMI/assets/136337151/e82355b8-c5d4-453a-83ba-5286a263be85)# Custom AMI (Amazon Machine Image) Creation
 
 ## Overview
 
@@ -19,10 +19,17 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
 ## Steps for creating a custom EBS backed AMI from an EC2 Instance Using AWS Console
 
 1. **+ Create** an EC2 Instance from a base AMI provided by AWS (here we will be creating a Windows Server 2019 virtual machine).
-  
-2. Connect to the VM through RDP (Remote Desktop Protocol) & customize the VM as per your requirements. In this example we will be installing Google Chrome, Visual Studio Code & Git, along with that we will set-up an auto shutdown feature which will pop up a message in every 15 minutes prompting a user to click on OK if he/she is working on the Virtual Machine & in-case of no response for next 5 minutes the VM will auto shutdown (Link to set-up this feature is provided in the end of the documentation)
+    <p align="Right">
+   <img width="800" height="400" img src="https://testbucket7867.s3.amazonaws.com/image1.png"/>
+   </p>
+   <img src="https://testbucket7867.s3.amazonaws.com/image1.png" width="480" height="280">
+   <br>
+   <img width="180" height="72" img src="/img001.png"/>
 
-3. Once all the customizations are complete ensure to remove all the temp files & cleanup the recycle bin, & then Shutdown the VM selecting Planned Shutdown option. This will prepare a specialized VM for image capturing, we will discuss in details the different types of ways that a VM can be prepared before capturing an image.
+  
+3. Connect to the VM through RDP (Remote Desktop Protocol) & customize the VM as per your requirements. In this example we will be installing Google Chrome, Visual Studio Code & Git, along with that we will set-up an auto shutdown feature which will pop up a message in every 15 minutes prompting a user to click on OK if he/she is working on the Virtual Machine & in-case of no response for next 5 minutes the VM will auto shutdown (Link to set-up this feature is provided in the end of the documentation)
+
+4. Once all the customizations are complete ensure to remove all the temp files & cleanup the recycle bin, & then Shutdown the VM selecting Planned Shutdown option. This will prepare a specialized VM for image capturing, we will discuss in details the different types of ways that a VM can be prepared before capturing an image.
 
  A. **Specialized VM:** A specialized image is an image that contains all the instance-specific information of a running VM, such as the computer name, the SID, and other settings that are unique to that VM. A specialized image can be used to create only one VM that is an exact copy of the original VM.
  
