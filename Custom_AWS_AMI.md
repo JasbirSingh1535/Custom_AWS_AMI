@@ -18,7 +18,7 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
 
 ## Steps for creating a custom EBS backed AMI from an EC2 Instance Using AWS Console
 
-1. Create an EC2 Instance from a base AMI provided by AWS (here we will be creating a Windows Server 2019 virtual machine).
+1. **Create** an EC2 Instance from a base AMI provided by AWS (here we will be creating a Windows Server 2019 virtual machine).
 
    ![](/img001.png)
 
