@@ -38,7 +38,7 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
   
   **Note:** For Windows Server 2016 & later you can find this option under EC2 Launch Settings while for Windows Server 2012 R2 & earlier it can be found under EC2 Config Setings.
 
-  ![](/img002.png)
+  
 
   * In the EC2 Launch Settings Dialog Box, for Administrator Password (1), do one of the following:
 
