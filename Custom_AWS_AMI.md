@@ -26,6 +26,7 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
    <img src="https://testbucket7867.s3.amazonaws.com/image1.png" width="150" height="280">
    <br>
    <img width="480" height="720" img src="/img001.png"/>
+   ![](/img001.png)
 2. Connect to the VM through RDP (Remote Desktop Protocol) & customize the VM as per your requirements. In this example we will be installing Google Chrome, Visual Studio Code & Git, along with that we will set-up an auto shutdown feature which will pop up a message in every 15 minutes prompting a user to click on OK if he/she is working on the Virtual Machine & in-case of no response for next 5 minutes the VM will auto shutdown (Link to set-up this feature is provided in the end of the documentation)
 
 3. Once all the customizations are complete ensure to remove all the temp files & cleanup the recycle bin, & then Shutdown the VM selecting Planned Shutdown option. This will prepare a specialized VM for image capturing, we will discuss in details the different types of ways that a VM can be prepared before capturing an image.
@@ -37,9 +38,8 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
   * After the completion of customizing your Windows VM, search for **EC2 Launch Settings** in the Windows search bar. 
   
   **Note:** For Windows Server 2016 & later you can find this option under EC2 Launch Settings while for Windows Server 2012 R2 & earlier it can be found under EC2 Config Setings.
-
   
-
+![](/img002.png)
   * In the EC2 Launch Settings Dialog Box, for Administrator Password (1), do one of the following:
 
     * **Choose Random:** EC2Launch generates a password and encrypts it using the user's key. The system disables this setting after the instance is launched so that this password persists if the instance is rebooted or stopped and started.
