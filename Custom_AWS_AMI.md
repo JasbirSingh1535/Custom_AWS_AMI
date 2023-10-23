@@ -19,14 +19,7 @@ We can create custom AMIs as per our requirements from the base AMIs provided by
 ## Steps for creating a custom EBS backed AMI from an EC2 Instance Using AWS Console
 
 1. **+ Create** an EC2 Instance from a base AMI provided by AWS (here we will be creating a Windows Server 2019 virtual machine).
-   <p align="Right">
-   <img width="48" height="72" img src="https://testbucket7867.s3.amazonaws.com/image1.png"/>
-   </p>
-
-   <img src="https://testbucket7867.s3.amazonaws.com/image1.png" width="150" height="280">
-   <br>
-   <img width="80" height="72" img src="/img001.png"/>
-
+  
 2. Connect to the VM through RDP (Remote Desktop Protocol) & customize the VM as per your requirements. In this example we will be installing Google Chrome, Visual Studio Code & Git, along with that we will set-up an auto shutdown feature which will pop up a message in every 15 minutes prompting a user to click on OK if he/she is working on the Virtual Machine & in-case of no response for next 5 minutes the VM will auto shutdown (Link to set-up this feature is provided in the end of the documentation)
 
 3. Once all the customizations are complete ensure to remove all the temp files & cleanup the recycle bin, & then Shutdown the VM selecting Planned Shutdown option. This will prepare a specialized VM for image capturing, we will discuss in details the different types of ways that a VM can be prepared before capturing an image.
